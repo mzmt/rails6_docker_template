@@ -1,0 +1,2 @@
+# rails6_docker_template
+Docker対応したRails6プロジェクトのテンプレート
