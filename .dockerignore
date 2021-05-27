@@ -1,0 +1,15 @@
+.git
+.gitignore
+.github
+.env
+.rspec
+
+log
+tmp
+
+/.bundle
+vendor/bundle
+
+/public/packs
+/public/packs-test
+/public/assets
