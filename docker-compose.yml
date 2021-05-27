@@ -1,0 +1,33 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: .
+    environment:
+      - EDITOR=vim
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/app
+      - /var/tmp
+      - sockets:/app/tmp/sockets
+    ports:
+      - '3000:3000'
+    depends_on:
+      - db
+    stdin_open: true
+    tty: true
+  db:
+    image: postgres
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data #MacOSの場合
+      # - app_postgre:/var/lib/postgresql/data #Windowsの場合
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=password
+    restart: always
+volumes:
+  mysql-data:
+  sockets:
