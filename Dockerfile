@@ -11,6 +11,5 @@ RUN bundle install
 
 ADD . /app
 RUN yarn install --check-files
-RUN bundle exec rails webpacker:compile
 RUN bundle exec rails assets:precompile
 EXPOSE 3000
