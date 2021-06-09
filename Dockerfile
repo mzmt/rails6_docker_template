@@ -9,7 +9,7 @@ COPY Gemfile .
 COPY Gemfile.lock .
 RUN bundle install
 
-ADD . /app
+COPY . /app
 RUN yarn install --check-files
 RUN bundle exec rails assets:precompile
 EXPOSE 3000
