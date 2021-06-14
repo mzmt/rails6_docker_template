@@ -29,5 +29,4 @@ services:
       - POSTGRES_PASSWORD=password
     restart: always
 volumes:
-  mysql-data:
   sockets:
