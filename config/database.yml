@@ -15,7 +15,7 @@ default: &default
 
 development:
   <<: *default
-  database: rails6_docker_template_developtment
+  database: rails6_docker_template_development
   # dockerを使わない場合、環境変数に'localhost'を追加する
   host: <%= ENV.fetch('DB_HOST', 'db') %>
 
