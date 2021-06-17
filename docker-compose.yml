@@ -22,8 +22,7 @@ services:
     ports:
       - '5432:5432'
     volumes:
-      - ./tmp/db:/var/lib/postgresql/data #MacOSの場合
-      # - app_postgre:/var/lib/postgresql/data #Windowsの場合
+      - ./tmp/db:/var/lib/postgresql/data
     environment:
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=password

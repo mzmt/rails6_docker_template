@@ -8,6 +8,8 @@ WORKDIR /app
 COPY Gemfile .
 COPY Gemfile.lock .
 RUN bundle install
-
 COPY . /app
+
+RUN chmod +x setup.sh
+CMD /app/setup.sh
 EXPOSE 3000
