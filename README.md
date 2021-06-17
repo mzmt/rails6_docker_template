@@ -2,9 +2,13 @@
 Docker対応したRails6プロジェクトのテンプレート
 
 # Setup
+`docker-compose run app bundle exec rails webpacker:install`
+`docker-compose run app bundle exec rails db:create && rails db:migrate`
 `docker-compose up`
 
-`docker-compose run app bundle exec rails db:create && rails db:migrate`
+or
+
+`make setup`
 
 # master.key
 `973be87b99ca36112c171c2d107bc56e`
