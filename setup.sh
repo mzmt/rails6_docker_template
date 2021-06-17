@@ -9,6 +9,7 @@ echo environment is ${RAILS_ENV:=development}
 
 if [ ${RAILS_ENV} = "staging" -o ${RAILS_ENV} = "production" ]; then
   # staging or production環境の処理
+  yarn install
   bundle exec rails assets:precompile
   bundle exec rails db:create && rails db:migrate
   rm -f tmp/pids/server.pid
