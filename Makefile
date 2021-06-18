@@ -8,5 +8,8 @@ setup:
 	@docker-compose run app bundle exec rails db:create && rails db:migrate
 	@docker-compose up
 
+build:
+	@docker-compose up --build
+
 migrate:
 	@docker-compose run app bundle exec rails db:migrate
