@@ -6,7 +6,6 @@ setup:
 	@docker-compose run app yarn install
 	@docker-compose run app bundle exec rails webpacker:install
 	@docker-compose run app bundle exec rails db:create && rails db:migrate
-	@docker-compose up
 
 build:
 	@docker-compose up --build
