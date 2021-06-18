@@ -3,6 +3,7 @@ Docker対応したRails6プロジェクトのテンプレート
 
 # Setup
 `make setup`
+`make up`
 
 or
 
