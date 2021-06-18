@@ -4,7 +4,7 @@ Docker対応したRails6プロジェクトのテンプレート
 # Setup
 ```bash
 docker-compose up
-docker-compose run app yarn install
+docker-compose run app yarn install --check-files
 docker-compose run app bundle exec rails webpacker:install
 docker-compose run app bundle exec rails db:create && rails db:migrate
 
