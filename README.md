@@ -2,13 +2,6 @@
 Docker対応したRails6プロジェクトのテンプレート
 
 # Setup
-```
-make setup
-make up
-```
-
-or
-
 ```bash
 docker-compose up
 docker-compose run app yarn install
