@@ -6,11 +6,12 @@ Docker対応したRails6プロジェクトのテンプレート
 
 or
 
-`docker-compose run app yarn install`
-`docker-compose run app bundle exec rails webpacker:install`
-`docker-compose run app bundle exec rails db:create && rails db:migrate`
-`docker-compose up`
-
+```bash
+docker-compose up
+docker-compose run app yarn install
+docker-compose run app bundle exec rails webpacker:install
+docker-compose run app bundle exec rails db:create && rails db:migrate
+```
 
 # master.key
 `973be87b99ca36112c171c2d107bc56e`
